@@ -15,6 +15,14 @@ use OpenApi\Annotations as OA;
  *         email="arc.albert.cruz@gmail.com"
  *     )
  * )
+ *
+ * @OA\SecurityScheme(
+ *     securityScheme="Authorization",
+ *     type="apiKey",
+ *     in="header",
+ *     name="Authorization",
+ *     description="Informe seu token de acesso no cabeçalho. Exemplo: API_BACKEND_TOKEN"
+ * )
  */
 class PexelsController extends Controller
 {
