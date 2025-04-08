@@ -24,6 +24,9 @@ class SearchVideoRequest extends FormRequest
         return [
             'query' => 'required|string|max:255',
             'per_page' => 'sometimes|integer|min:1|max:80',
+            'page' => 'sometimes|integer|min:1',
+            'locale' => 'sometimes|string',
+            'size' => 'sometimes|string|in:large,medium,small',
         ];
     }
 
@@ -41,6 +44,11 @@ class SearchVideoRequest extends FormRequest
             'per_page.integer' => 'O campo :attribute deve ser um número inteiro.',
             'per_page.min' => 'O campo :attribute deve ser pelo menos :min.',
             'per_page.max' => 'O campo :attribute não pode ser maior que :max.',
+            'page.integer' => 'O campo :attribute deve ser um número inteiro.',
+            'page.min' => 'O campo :attribute deve ser pelo menos :min.',
+            'locale.string' => 'O campo :attribute deve ser uma string.',
+            'size.string' => 'O campo :attribute deve ser uma string.',
+            'size.in' => 'O campo :attribute deve ser um dos seguintes valores: :values.',
         ];
     }
 }

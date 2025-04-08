@@ -42,14 +42,14 @@ class PexelsController extends Controller
      *         name="query",
      *         in="query",
      *         required=true,
-     *         description="search term",
+     *         description="Search term",
      *         @OA\Schema(type="string", example="nature")
      *     ),
      *     @OA\Parameter(
      *         name="per_page",
      *         in="query",
      *         required=false,
-     *         description="Result per page",
+     *         description="Results per page",
      *         @OA\Schema(type="integer", example=5)
      *     ),
      *     @OA\Parameter(
@@ -58,6 +58,13 @@ class PexelsController extends Controller
      *         required=false,
      *         description="Page number",
      *         @OA\Schema(type="integer", example=1)
+     *     ),
+     *     @OA\Parameter(
+     *         name="locale",
+     *         in="query",
+     *         required=false,
+     *         description="Search locale (e.g. 'es-ES', 'fr-FR, 'pt-PT')",
+     *         @OA\Schema(type="string", example="pt-PT")
      *     ),
      *     @OA\Response(
      *         response=200,
